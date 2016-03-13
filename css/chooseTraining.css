@@ -1,0 +1,17 @@
+header .header-chooseTraining {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(../img/headerChooseTraining.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.container{
+    color: rgba(255,255,255,.7);
+}
