@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Boxen Trainingsplan</title>
+	<style>
+		td, th		{ width: 200px; height: 50px; }
+	</style>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -24,7 +27,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
-    <link rel="stylesheet" href="css/chooseTraining.css" type="text/css">
+    <link rel="stylesheet" href="css/publishTraining.css" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,61 +52,41 @@
     <div class="header-chooseTraining">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Wählen Sie Ihr Training</h1>
+                <h1>Ihr Trainingsplan</h1>
             </div>
         </div>
     </div>
 </header>
 
 <section class="bg-primary" id="choices">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-
-                <div class="btn-group">
-                    Zeitraum des Trainingsplans?
-                    <button type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        Trainingszeitraum<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">1 Monat</a></li>
-                        <li><a href="#">2 Monate</a></li>
-                        <li><a href="#">3 Monate</a></li>
-                    </ul>
-                    <hr class="light">
-                </div>
-
-                <div class="btn-group">
-                    Dauer des Trainings?
-                    <button type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        Trainingsdauer<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">20 min</a></li>
-                        <li><a href="#">30 min</a></li>
-                        <li><a href="#">40 min</a></li>
-						<li><a href="#">50 min</a></li>
-                    </ul>
-                    <hr class="light">
-                </div>
-
-                <div class="btn-group">
-                    Ihr Niveau?
-                    <button type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        Trainingsniveau<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Anfänger</a></li>
-                        <li><a href="#">Sportlich</a></li>
-                        <li><a href="#">Profi</a></li>
-                    </ul>
-                    <hr class="light">
-                </div>
-                <hr class="light">
-                <a href="publishTraining.html" class="btn btn-default btn-xl">Start</a>
-            </div>			
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 text-center">
+			<div class="btn-group">
+			
+				<h2>1. Woche</h2>
+				<h3>1. Tag</h3>
+				<table>
+					<tr>
+						<th>Liegestützen</th>
+						<th>3 Sätze</th>
+						<th>15 Wiederholungen</th>
+					</tr>
+					
+					<tr>
+						<th>Crunches</th>
+						<th>3 Sätze</th>
+						<th>15 Wiederholungen</th>
+					</tr>
+					
+					<tr>
+						<th>Situps</th>
+						<th>3 Sätze</th>
+						<th>20 Wiederholungen</th>
+					</tr>
+				</table>	
+			</div>
+		</div>
+	</div>
 </section>
 
 <!-- Socket.io.js -->
