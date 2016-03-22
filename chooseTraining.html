@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Boxen Trainingsplan</title>
+	
+	<script type="text/javascript" src="js/publishTraining.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -59,52 +61,55 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-
-                <div class="btn-group">
-                    Zeitraum des Trainingsplans?
-                    <button type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        Trainingszeitraum<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">1 Monat</a></li>
-                        <li><a href="#">2 Monate</a></li>
-                        <li><a href="#">3 Monate</a></li>
-                    </ul>
-                    <hr class="light">
-                </div>
-
+				
+				<form>
+                
                 <div class="btn-group">
                     Dauer des Trainings?
-                    <button type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <select id="dauer" type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
                         Trainingsdauer<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">20 min</a></li>
-                        <li><a href="#">30 min</a></li>
-                        <li><a href="#">40 min</a></li>
-						<li><a href="#">50 min</a></li>
-                    </ul>
-                    <hr class="light">
+						<option>15 min</option>  
+						<option selected>30 min</option> 
+						<option>45 min</option> 
+						<hr class="light">
+					</select>
                 </div>
 
                 <div class="btn-group">
                     Ihr Niveau?
-                    <button type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <select id="niveau" type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
                         Trainingsniveau<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Anfänger</a></li>
-                        <li><a href="#">Sportlich</a></li>
-                        <li><a href="#">Profi</a></li>
-                    </ul>
-                    <hr class="light">
+						<option>Anfänger</option>  
+						<option selected>Sportlich</option> 
+						<option>Profi</option> 
+						<hr class="light">
+					</select>
                 </div>
+				
+				<div class="btn-group">
+					Art des Trainings?
+                    <select id="art" type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Ziel<span class="caret"></span>
+						<option selected>Muskelaufbau</option>  
+						<option>Kraftausdauer</option> 
+						<hr class="light">
+					</select>
+                </div>
+				
+				<script type="text/javascript">
+				var x = document.getElementById("dauer");
+				if x = "30 min" alert("Hallo");
+				</script>
+
+				
                 <hr class="light">
-                <a href="publishTraining.html" class="btn btn-default btn-xl">Start</a>
-            </div>			
+                <a href="publishTraining.html" onsubmit=plan() class="btn btn-default btn-xl">Start</a>
+				</form>
+			</div>			
         </div>
     </div>
 </section>
+
 
 <!-- Socket.io.js -->
 <script src="http://localhost:5555/ws/socket.io/socket.io.js"></script>

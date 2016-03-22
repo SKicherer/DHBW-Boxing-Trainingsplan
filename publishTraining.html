@@ -11,6 +11,7 @@
 	<style>
 		td, th		{ width: 200px; height: 50px; }
 	</style>
+	<script type="text/javascript" src="js/publishTraining.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -21,7 +22,9 @@
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
           rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
 
@@ -58,6 +61,8 @@
     </div>
 </header>
 
+
+
 <section class="bg-primary" id="choices">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 text-center">
@@ -65,10 +70,10 @@
 			
 				<h2>1. Woche</h2>
 				<h3>1. Tag</h3>
-				<table>
+				<table id="plan">
 					<tr>
 						<th>Liegestützen</th>
-						<th>3 Sätze</th>
+						<th id="satz">3 Sätze</th>
 						<th>15 Wiederholungen</th>
 					</tr>
 					
@@ -83,7 +88,27 @@
 						<th>3 Sätze</th>
 						<th>20 Wiederholungen</th>
 					</tr>
-				</table>	
+				</table>
+
+				<h1>Countdown Clock</h1>
+					<div id="clockdiv">
+					  <div>
+						<span class="days"></span>
+						<div class="smalltext">Days</div>
+					  </div>
+					  <div>
+						<span class="hours"></span>
+						<div class="smalltext">Hours</div>
+					  </div>
+					  <div>
+						<span class="minutes"></span>
+						<div class="smalltext">Minutes</div>
+					  </div>
+					  <div>
+						<span class="seconds"></span>
+						<div class="smalltext">Seconds</div>
+					  </div>
+					</div>
 			</div>
 		</div>
 	</div>
