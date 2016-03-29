@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html lang="en">
 
 <head>
@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Boxen Trainingsplan</title>
+	<style>
+		td, th		{ width: 200px; height: 50px; }
+	</style>
 	<script type="text/javascript" src="js/publishTraining.js"></script>
 	<script language="JavaScript" src="js/publishTraining.js"></script>
 
@@ -20,13 +23,15 @@
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
           rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
-    <link rel="stylesheet" href="css/chooseTraining.css" type="text/css">
+    <link rel="stylesheet" href="css/publishTraining.css" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,75 +56,69 @@
     <div class="header-chooseTraining">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Wählen Sie Ihr Training</h1>
+                <h1>Ihr Trainingsplan</h1>
             </div>
         </div>
     </div>
 </header>
 
+
+
 <section class="bg-primary" id="choices">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-				
-				<form>
-					<div class="btn-group">
-						Dauer des Trainings?
-						<select id="dauer" type="text" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
-							Trainingsdauer<span class="caret"></span>
-							<option>15 min</option>  
-							<option selected>30 min</option> 
-							<option>45 min</option> 
-							<hr class="light">
-						</select>
-					</div>
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 text-center">
+			<div class="btn-group">
+			<?php echo $_GET["Dauer"]; ?>
+			<script language="JavaScript">
+				setPlan2();
+					
+			</script>
+			
+				<h2>1. Woche</h2>
+				<h3>1. Tag</h3>
+				<table id="plan">
+					<tr>
+						<th>Liegestützen</th>
+						<th id="satz">3 Sätze</th>
+						<th>15 Wiederholungen</th>
+					</tr>
+					
+					<tr>
+						<th>Crunches</th>
+						<th>3 Sätze</th>
+						<th>15 Wiederholungen</th>
+					</tr>
+					
+					<tr>
+						<th>Situps</th>
+						<th>3 Sätze</th>
+						<th>20 Wiederholungen</th>
+					</tr>
+				</table>
 
-					<div class="btn-group">
-						Ihr Niveau?
-						<select id="niveau" type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
-							Trainingsniveau<span class="caret"></span>
-							<option>Anfänger</option>  
-							<option selected>Sportlich</option> 
-							<option>Profi</option> 
-							<hr class="light">
-						</select>
+				<h1>Countdown Clock</h1>
+					<div id="clockdiv">
+					  <div>
+						<span class="days"></span>
+						<div class="smalltext">Days</div>
+					  </div>
+					  <div>
+						<span class="hours"></span>
+						<div class="smalltext">Hours</div>
+					  </div>
+					  <div>
+						<span class="minutes"></span>
+						<div class="smalltext">Minutes</div>
+					  </div>
+					  <div>
+						<span class="seconds"></span>
+						<div class="smalltext">Seconds</div>
+					  </div>
 					</div>
-					
-					<div class="btn-group">
-						Art des Trainings?
-						<select id="art" type="button" class="form-control btn btn-default dropdown-toggle" data-toggle="dropdown">
-							Ziel<span class="caret"></span>
-							<option selected>Muskelaufbau</option>  
-							<option>Kraftausdauer</option> 
-							<hr class="light">
-						</select>
-					</div>
-										
-					<hr class="light">
-					
-					<a href="publishTraining.html?221" class="btn btn-default btn-xl">Start</a>
-					
-					<!--
-					<script language="JavaScript">
-					i
-					//setPlan(dauer, niveau, art);
-					//plan();
-					//<a href="publishTraining.html?Dauer=2" onclick="plan()" class="btn btn-default btn-xl">Start</a>
-					function plan2()
-					{ }
-					//alert(new Date());
-					if(dauer=="30 min")
-					{ document.write(new Date());}
-					//
-					</script>
-					-->
-					
-				</form>
-			</div>			
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 </section>
-
 
 <!-- Socket.io.js -->
 <script src="http://localhost:5555/ws/socket.io/socket.io.js"></script>

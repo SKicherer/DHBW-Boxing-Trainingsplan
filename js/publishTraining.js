@@ -1,7 +1,46 @@
+var tdauer, txt;
+
+function plan3()
+{
+	var tdauer = document.getElementById("dauer").value;
+	var tniveau = document.getElementById("niveau").value;
+	var tart = document.getElementById("art").value;
+	
+	if (tdauer=="30 min")
+	{
+		tdauer='2';
+		alert(tdauer);
+		alert("Hi");
+	}
+	
+	return {a href="publishTraining.html?&2"};
+}
+
+function GetText() {
+alert(document.getElementById("Eingabefeld").value);
+}
+
+function setPlan(dauer, niveau, art)
+{
+	alert(dauer);
+	alert(getElementById("dauer").value)
+}
+
+function setPlan2()
+{
+	document.write(tdauer);
+	txt = document.getElementById("dauer").value;
+	alert(txt);
+	document.write(tdauer + " Hi " + document.getElementById("dauer").value);
+	
+	//document.write(document.getElementById("dauer").value)
+}
+
 function plan()
 {
-	var tdauer = document.getElementById("dauer");
+	tdauer = document.getElementById("dauer").value;
 	alert(tdauer);
+	document.write("Hallo");
 }
 
 function getTimeRemaining(endtime) {

@@ -12,6 +12,7 @@
 		td, th		{ width: 200px; height: 50px; }
 	</style>
 	<script type="text/javascript" src="js/publishTraining.js"></script>
+	<script language="JavaScript" src="js/publishTraining.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -68,12 +69,30 @@
 		<div class="col-lg-8 col-lg-offset-2 text-center">
 			<div class="btn-group">
 			
+			<script language="JavaScript">
+			var uebernahme=new String(document.location.href); 
+			var uebergabe=uebernahme.indexOf("?");
+			var a=new String(uebernahme.substring(uebergabe+1,uebergabe+2));
+			var b=new String(uebernahme.substring(uebergabe+2,uebergabe+3));
+			var c=new String(uebernahme.substring(uebergabe+3,uebergabe+4));
+			
+			document.write("<h2>1. Runde</h2><table>");
+			document.write("<tr><th>Liegestützen</th>");
+			document.write("<th>"+a*2+" Sätze</th>");
+			document.write("<th>"+a*15+" Wiederholungen</th></tr>");
+			
+			document.write("<tr><th>Crunches</th>");
+			document.write("<th>"+a*2+" Sätze</th>");
+			document.write("<th>"+a*10+" Wiederholungen</th></tr>");
+					
+			</script>
+			<!--
 				<h2>1. Woche</h2>
 				<h3>1. Tag</h3>
-				<table id="plan">
+				<table>
 					<tr>
 						<th>Liegestützen</th>
-						<th id="satz">3 Sätze</th>
+						<th> Sätze</th>
 						<th>15 Wiederholungen</th>
 					</tr>
 					
@@ -109,6 +128,7 @@
 						<div class="smalltext">Seconds</div>
 					  </div>
 					</div>
+				-->
 			</div>
 		</div>
 	</div>
