@@ -11,8 +11,10 @@
 	<style>
 		td, th		{ width: 200px; height: 50px; }
 	</style>
-	<script type="text/javascript" src="js/publishTraining.js"></script>
-	<script language="JavaScript" src="js/publishTraining.js"></script>
+	<script type="text/javascript" src="js/Plan.js"></script>
+	
+	<!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -70,44 +72,43 @@
 			<div class="btn-group">
 			
 			<script language="JavaScript">
-			var uebernahme=new String(document.location.href); 
-			var uebergabe=uebernahme.indexOf("?");
-			var a=new String(uebernahme.substring(uebergabe+1,uebergabe+2));
-			var b=new String(uebernahme.substring(uebergabe+2,uebergabe+3));
-			var c=new String(uebernahme.substring(uebergabe+3,uebergabe+4));
 			
-			document.write("<h2>1. Runde</h2><table>");
-			document.write("<tr><th>Liegestützen</th>");
-			document.write("<th>"+a*2+" Sätze</th>");
-			document.write("<th>"+a*15+" Wiederholungen</th></tr>");
+			var t = Init();
+			if (t.art == 1)
+			{
+				Runde(1);
+				Uebung("Liegestützen",2,5);
+				Uebung("Crunches",2,10);
+				Uebung("Situps",3,10);
+				Pause();
+				
+				Runde(2);
+				Uebung("Juming Jacks",1,25);
+				Uebung("Strecksprünge",1,25);
+				Uebung("Seilhüpfen",1,50);
+				Pause();
+			}
 			
-			document.write("<tr><th>Crunches</th>");
-			document.write("<th>"+a*2+" Sätze</th>");
-			document.write("<th>"+a*10+" Wiederholungen</th></tr>");
-					
+			if (t.art == 2)
+			{
+				Runde(1);
+				Uebung("Juming Jacks",1,25);
+				Uebung("Strecksprünge",1,25);
+				Uebung("Seilhüpfen",1,50);
+				Pause();
+				
+				Runde(2);
+				Uebung("Liegestützen",2,5);
+				Uebung("Crunches",2,10);
+				Uebung("Situps",3,10);
+				Pause();
+			
+			}
+
+			Ende();
 			</script>
-			<!--
-				<h2>1. Woche</h2>
-				<h3>1. Tag</h3>
-				<table>
-					<tr>
-						<th>Liegestützen</th>
-						<th> Sätze</th>
-						<th>15 Wiederholungen</th>
-					</tr>
-					
-					<tr>
-						<th>Crunches</th>
-						<th>3 Sätze</th>
-						<th>15 Wiederholungen</th>
-					</tr>
-					
-					<tr>
-						<th>Situps</th>
-						<th>3 Sätze</th>
-						<th>20 Wiederholungen</th>
-					</tr>
-				</table>
+
+			<!-- Test-Stoppuhr
 
 				<h1>Countdown Clock</h1>
 					<div id="clockdiv">
@@ -134,11 +135,6 @@
 	</div>
 </section>
 
-<!-- Socket.io.js -->
-<script src="http://localhost:5555/ws/socket.io/socket.io.js"></script>
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>

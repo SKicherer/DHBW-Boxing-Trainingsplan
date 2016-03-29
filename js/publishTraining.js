@@ -1,3 +1,5 @@
+//Testdatei für Sonja
+
 var tdauer, txt;
 
 function plan3()
@@ -13,7 +15,7 @@ function plan3()
 		alert("Hi");
 	}
 	
-	return {a href="publishTraining.html?&2"};
+//	return {a href="publishTraining.html?&2"};
 }
 
 function GetText() {
