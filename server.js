@@ -1,65 +1,66 @@
-var app = require("express");
-var bodyParser = require("body-parser");
-var cookieParser = require("cookie-parser");
-var url = require("url");
-var http = require('http');
-var cookie = require('cookie');
-var _ = require("underscore");
+var express = require('express');
+var app = express();
+var server = require('http').createServer(app)
+var io = require('socket.io').listen(server);
+var device  = require('express-device');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var runningPortNumber = process.env.PORT;
 
-var clients = {};
-var serverPort = 5555;                  // Port where we'll run the server
-var serverDemoSitePort = 6666;          // Port where we'll run the client
+//set the view engine
+app.set('view engine', 'ejs');
+app.set('views', __dirname +'/views');
 
-module.exports = createServer;
-function createServer() {
-    var portal = app();
-    portal.use(bodyParser.json());
-    portal.use(bodyParser.urlencoded({extended: false}));
-    portal.use(cookieParser());
-    portal.use("/static", app.static(__dirname + "/js"));
+// connect to our database
+require('./configuration/db.js');
 
-    portal.get('/', function (req, res) {
-        res.sendfile(__dirname + '/index.html');
-    });
-    portal.set("views", __dirname + "/js");
-    portal.set("view engine", "jade");
+app.use(logger('dev'));
+app.use(device.capture());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+// Access everything in '/public' directly
+app.use(express.static(__dirname + '/public'));
 
-    portal.listen(serverDemoSitePort);
+// logs every request
+app.use(function(req, res, next){
+	// output every request in the array
+	console.log({method:req.method, url: req.url, device: req.device});
+	// goes onto the next function in line
+	next();
+});
 
-    var server = http.createServer(function (request) {
-        var path = url.parse(request.url).pathname;
-    });
+// index page
+app.get("/", function(req, res){
+	res.render('pages/index', {});
+});
 
-    var io = require('socket.io')(server, {path: "/ws/socket.io"});
-    server.listen(serverPort, function () {
-        console.log("Server is listening on port " + serverPort);
-    });
+//  chooseTraining page
+app.get('/chooseTraining', function(req, res) {
+    res.render('pages/chooseTraining');
+});
 
-    var connection = io.on('connection', function (socket) {
+//  trainingTipps page
+app.get('/trainingTipps', function(req, res) {
+    res.render('pages/trainingTipps');
+});
 
-        var cookies = socket.request.headers.cookie;        // 'cookies' are in a typeof string
+//  publishTraining page
+app.get('/publishTraining', function(req, res) {
+    res.render('pages/publishTraining');
+});
 
-        socket.on('connection', function (socket) {
-            socket.emit('news', {hello: 'world'});
-            socket.on('my other event', function (data) {
-                console.log(data);
-            });
-        });
+io.sockets.on('connection', function (socket) {
+/*	io.sockets.emit('blast', {msg:"<span style=\"color:red !important\">someone connected</span>"});
 
-    });
+	socket.on('blast', function(data, fn){
+		console.log(data);
+		io.sockets.emit('blast', {msg:data.msg});
+		fn();//call the client back to clear out the field
+	});
+*/
+});
 
-    portal.post('/ciamlogin', function (request, response) {
-        var username = request.body.username;
-        var SMSession = "SM_TIMESTAMP" + ":" + new Date().getTime();
-        var newUserName = username;
-        if (!newUserName) {
-            newUserName = "user00";
-        }
-        var smCookieHeader = {
-            httpOnly: true,
-            maxAge: 86400000 + 86400000
-        };
-        response.cookie("SMCOOKIE ", SMSession + ":" + newUserName, smCookieHeader);
-        response.sendStatus(200);
-    });
-}
+server.listen(runningPortNumber);
+

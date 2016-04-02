@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+    <link rel="stylesheet" href="/css/publishTraining.css" type="text/css">
+</head>
+
+<body id="page-top">
+
+<header>
+    <% include ../partials/headerPages %>
+</header>
+
+<header>
+    <div class="header-chooseTraining">
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Ihr Trainingsplan</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="bg-primary" id="choices">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 text-center">
+			<div class="btn-group">
+
+			<script language="JavaScript">
+                var t = Init();
+                if (t.art == 1)
+                {
+                    Runde(1);
+                    Uebung("Liegestützen",2,5);
+                    Uebung("Crunches",2,10);
+                    Uebung("Situps",3,10);
+                    Pause();
+
+                    Runde(2);
+                    Uebung("Juming Jacks",1,25);
+                    Uebung("Strecksprünge",1,25);
+                    Uebung("Seilhüpfen",1,50);
+                    Pause();
+                }
+
+                if (t.art == 2)
+                {
+                    Runde(1);
+                    Uebung("Juming Jacks",1,25);
+                    Uebung("Strecksprünge",1,25);
+                    Uebung("Seilhüpfen",1,50);
+                    Pause();
+
+                    Runde(2);
+                    Uebung("Liegestützen",2,5);
+                    Uebung("Crunches",2,10);
+                    Uebung("Situps",3,10);
+                    Pause();
+
+                }
+                Ende();
+			</script>
+
+			<!-- Test-Stoppuhr
+
+				<h1>Countdown Clock</h1>
+					<div id="clockdiv">
+					  <div>
+						<span class="days"></span>
+						<div class="smalltext">Days</div>
+					  </div>
+					  <div>
+						<span class="hours"></span>
+						<div class="smalltext">Hours</div>
+					  </div>
+					  <div>
+						<span class="minutes"></span>
+						<div class="smalltext">Minutes</div>
+					  </div>
+					  <div>
+						<span class="seconds"></span>
+						<div class="smalltext">Seconds</div>
+					  </div>
+					</div>
+				-->
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/bower_components/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="/js/jquery.fittext.js"></script>
+<script src="/js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/bower_components/bootstrap/js/creative.js"></script>
+<script type="text/javascript" src="js/publishTraining.js"></script>
+
+</body>
+</html>
