@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+    <link rel="stylesheet" href="/css/chooseTraining.css" type="text/css">
+</head>
+
+<body id="page-top">
+
+<header>
+    <% include ../partials/headerPages %>
+</header>
+
+<header>
+    <div class="header-chooseTraining">
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Ihr persönliches Trainingsprogramm</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="bg-primary" id="choices">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <form role="form" name="addTraining" method="post" action="/addTraining">
+                    <div class="form-group">
+                        <label for="nameOfTraining">Neu Trainingsprogrammname:</label>
+                        <input type="text" class="form-control" id="nameOfTraining"
+                               placeholder="Trainingsname" name="nameOfTraining" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="route">Wie viele Rounds:</label>
+                        <input type="text" class="form-control" id="route"
+                               placeholder="Rounds" name="route" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="nameOfExercise">Neu Aufgabename:</label>
+                        <input type="text" class="form-control" id="nameOfExercise"
+                               placeholder="Aufgabe" name="nameOfExercise" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="sets">Anzahl der Sätzen:</label>
+                        <input type="text" class="form-control" id="sets"
+                               placeholder="Sätze" name="sets" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="repeats">Anzahl der Wiederholungen:</label>
+                        <input type="text" class="form-control" id="repeats"
+                               placeholder="Wiederholungen" name="repeats" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="durationOfPause">Dauer von Pause:</label>
+                        <input type="text" class="form-control" id="durationOfPause"
+                               placeholder="Pause" name="durationOfPause" value="">
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Speichern</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/bower_components/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="/js/jquery.fittext.js"></script>
+<script src="/js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/bower_components/bootstrap/js/creative.js"></script>
+
+</body>
+</html>

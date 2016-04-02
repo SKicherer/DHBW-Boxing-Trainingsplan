@@ -10,12 +10,6 @@ var dbURI = 'mongodb://localhost/trainingsplan';
 // Create the database connection
 mongoose.connect(dbURI);
 
-// CONNECTION EVENTS
-
-mongoose.connection.once('open', function() {
-    console.log("********Test***********************************");
-});
-
 // When successfully connected
 mongoose.connection.on('connected', function () {
     console.log('Mongoose default connection open to ' + dbURI);

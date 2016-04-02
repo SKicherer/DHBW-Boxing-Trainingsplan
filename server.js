@@ -36,17 +36,30 @@ app.get("/", function(req, res){
 	res.render('pages/index', {});
 });
 
-//  chooseTraining page
+// chooseTraining page
 app.get('/chooseTraining', function(req, res) {
     res.render('pages/chooseTraining');
 });
 
-//  trainingTipps page
+require('./public/js/trainings')(app);
+
+// addTraining page
+app.get('/addNewTraining', function(req, res) {
+    res.render('pages/addNewTraining');
+});
+
+// trainingTipps page
 app.get('/trainingTipps', function(req, res) {
     res.render('pages/trainingTipps');
 });
 
-//  publishTraining page
+// download a PDF file
+app.get('/download', function(req, res){
+    var file = 'public/pdf/Wochenplan.pdf';
+    res.download(file);
+});
+
+// publishTraining page
 app.get('/publishTraining', function(req, res) {
     res.render('pages/publishTraining');
 });
