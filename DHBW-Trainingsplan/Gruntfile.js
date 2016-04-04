@@ -1,18 +1,18 @@
 // Generated on 2016-04-01 using generator-socketio 0.0.3
 'use strict';
 var moment = require('moment');
- 
+
 var LIVERELOAD_PORT = 35729;
-var RUNNING_PORT = 4000; // <- if you change this, you need to change in public/js/app.js and recompile
+var RUNNING_PORT = 4000; // <- if you change this, you need to change in public/js/chooseTraining.js and recompile
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
 };
- 
+
 module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
- 
+
   grunt.initConfig({
 
     cssmin: {
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
     sass: {
       dist: {
         options: {
@@ -65,12 +65,12 @@ module.exports = function (grunt) {
         stripBanners:true
       },
       dist: {
-        src: ['public/js/app.js'],
-        dest: 'public/js/concat.js',
+        src: ['public/js/chooseTraining.js'],
+        dest: 'public/js/concat.js'
       },
     },
 
-    //this is currently turned off, since jquery KILLS it 
+    //this is currently turned off, since jquery KILLS it
     jshint: {
       options: {
         curly: true,
@@ -83,7 +83,7 @@ module.exports = function (grunt) {
       },
       files:{
         src:['public/js/concat.js']
-      } 
+      }
     },
 
     uglify: {
@@ -92,7 +92,7 @@ module.exports = function (grunt) {
       },
       my_target: {
         files: {
-          'public/js/app.min.js': ['public/js/concat.js']
+          'public/js/chooseTraining.min.js': ['public/js/concat.js']
         }
       }
     },
@@ -111,7 +111,7 @@ module.exports = function (grunt) {
         },
         css: {
             files: [
-                'public/css/**/*.css',
+                'public/css/**/*.css'
             ],
         },
         less: {
@@ -198,9 +198,9 @@ module.exports = function (grunt) {
     }
 
   });
- 
+
   //grunt.registerTask('server', ['build', 'connect:livereload', 'open', 'watch']);
- 
+
   grunt.registerTask('build', ['cssmin', 'concat', 'uglify']);
 
   grunt.registerTask('launch', ['wait', 'open']);

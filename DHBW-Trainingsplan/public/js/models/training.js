@@ -7,15 +7,16 @@ var mongoose = require('mongoose');
 //var app = app || {};
 
 var trainingsSchema = mongoose.Schema({
-    id              :String,
-    nameOfTraining  :String,
-    route           :String,
-    exercise        : {
-        nameOfExercise  :String,
-        sets            :String,
-        repeats         :String,
-        durationOfPause :String
-    }
+    _id: String,
+    nameOfTraining: String,
+    route: String,
+    exercise: {
+        nameOfExercise1: String,
+        nameOfExercise2: String,
+        nameOfExercise3: String
+    },
+    sets: String,
+    repeats: String
 });
 
 // create the model for every training and expose it to our app(in file: trainings.json)

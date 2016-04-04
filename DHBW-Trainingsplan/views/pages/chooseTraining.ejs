@@ -12,28 +12,16 @@
     <% include ../partials/headerPages %>
 </header>
 
-<header>
-    <div class="header-chooseTraining">
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>Wählen Sie Ihr Training</h1>
-            </div>
-        </div>
-    </div>
-</header>
-
 <section class="bg-primary" id="choices">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-
                 <form>
                     <div class="btn-group">
                         Dauer des Trainings?
-                        <select id="dauer" type="text" class="form-control btn btn-default dropdown-toggle"
+                        <select id="duration" type="text" class="form-control btn btn-default dropdown-toggle"
                                 data-toggle="dropdown">
                             Trainingsdauer<span class="caret"></span>
-                            <option>15 min</option>
                             <option selected>30 min</option>
                             <option>45 min</option>
                             <hr class="light">
@@ -42,11 +30,10 @@
 
                     <div class="btn-group">
                         Ihr Niveau?
-                        <select id="niveau" type="button" class="form-control btn btn-default dropdown-toggle"
+                        <select id="level" type="button" class="form-control btn btn-default dropdown-toggle"
                                 data-toggle="dropdown">
                             Trainingsniveau<span class="caret"></span>
-                            <option>Anfänger</option>
-                            <option selected>Sportlich</option>
+                            <option selected>Anfänger</option>
                             <option>Profi</option>
                             <hr class="light">
                         </select>
@@ -54,7 +41,7 @@
 
                     <div class="btn-group">
                         Art des Trainings?
-                        <select id="art" type="button" class="form-control btn btn-default dropdown-toggle"
+                        <select id="type" type="button" class="form-control btn btn-default dropdown-toggle"
                                 data-toggle="dropdown">
                             Ziel<span class="caret"></span>
                             <option selected>Muskelaufbau</option>
@@ -65,7 +52,7 @@
 
                     <hr class="light">
 
-                    <a id="ParamSpeichern" class="btn btn-default btn-xl">Start</a>
+                    <a href="publishTraining" id="ParamSpeichern" class="btn btn-default btn-xl">Start</a>
 
                 </form>
             </div>
@@ -73,21 +60,9 @@
     </div>
 </section>
 
-<!-- jQuery -->
-<script src="/js/jquery.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/bower_components/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-<script src="/js/jquery.fittext.js"></script>
-<script src="/js/wow.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/bower_components/bootstrap/js/creative.js"></script>
-<script src="/js/chooseTraining.js"></script>
+<jsFooter>
+    <% include ../partials/jsFooter %>
+</jsFooter>
 
 </body>
 </html>

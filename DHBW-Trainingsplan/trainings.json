@@ -1,0 +1,98 @@
+[
+    {
+        "_id": "00001",
+        "nameOfTraining": "30-Anf-Musk",
+        "route": "3",
+        "exercise": {
+            "nameOfExercise1": "Liegestützen",
+            "nameOfExercise2": "Crunches",
+            "nameOfExercise3": "Situps"
+        },
+        "sets": "2",
+        "repeats": "15"
+    },
+    {
+        "_id": "00002",
+        "nameOfTraining": "30-Anf-Kraft",
+        "route": "3",
+        "exercise": {
+            "nameOfExercise": "Juming Jacks",
+            "nameOfExercise2": "Strecksprünge",
+            "nameOfExercise3": "Situps"
+        },
+        "sets": "2",
+        "repeats": "15"
+    },
+    {
+        "_id": "00003",
+        "nameOfTraining": "30-Prof-Kraft",
+        "route": "3",
+        "exercise": {
+            "nameOfExercise": "Juming Jacks",
+            "nameOfExercise2": "Strecksprünge",
+            "nameOfExercise3": "Liegestützen"
+        },
+        "sets": "2",
+        "repeats": "30"
+    },
+    {
+        "_id": "00004",
+        "nameOfTraining": "30-Prof-Musk",
+        "route": "3",
+        "exercise": {
+            "nameOfExercise": "Juming Jacks",
+            "nameOfExercise2": "Strecksprünge",
+            "nameOfExercise3": "Situps"
+        },
+        "sets": "3",
+        "repeats": "30"
+    },
+    {
+        "_id": "00005",
+        "nameOfTraining": "15-Anf-Musk",
+        "route": "3",
+        "exercise": {
+            "nameOfExercise": "Juming Jacks",
+            "nameOfExercise2": "Strecksprünge",
+            "nameOfExercise3": "Liegestützen"
+        },
+        "sets": "2",
+        "repeats": "15"
+    },
+    {
+        "_id": "00006",
+        "nameOfTraining": "15-Anf-Kraft",
+        "route": "2",
+        "exercise": {
+            "nameOfExercise": "Juming Jacks",
+            "nameOfExercise2": "Strecksprünge",
+            "nameOfExercise3": "Situps"
+        },
+        "sets": "2",
+        "repeats": "15"
+    },
+    {
+        "_id": "00007",
+        "nameOfTraining": "15-Prof-Kraft",
+        "route": "2",
+        "exercise": {
+            "nameOfExercise": "Juming Jacks",
+            "nameOfExercise2": "Strecksprünge",
+            "nameOfExercise3": "Liegestützen"
+        },
+        "sets": "2",
+        "repeats": "15"
+    },
+    {
+        "_id": "00008",
+        "nameOfTraining": "15-Prof-Musk",
+        "route": "2",
+        "exercise": {
+            "nameOfExercise": "Juming Jacks",
+            "nameOfExercise2": "Strecksprünge",
+            "nameOfExercise3": "Situps"
+        },
+        "sets": "2",
+        "repeats": "15"
+    }
+]

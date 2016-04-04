@@ -1,16 +1,16 @@
  module.exports = function(app) {
 
-    app.get('/trainingsList', function(req, res) {
-        // load up the activity model
-        var Training = require('./models/training');
-        // query db for all activities
-        Training.find( function ( err, items, count ){
-            res.render( 'trainingList', {
-                title           : 'Trainings',
-                traininglist    : items
-            });
-        });
-    });
+     app.get('/trainingsList', function(req, res) {
+         // load up the activity model
+         var Training = require('./models/training');
+         // query db for all activities
+         Training.find( function ( err, items, count ){
+             res.render( 'trainingList', {
+                 title           : 'Trainings',
+                 traininglist    : items
+             });
+         });
+     });
 
 	/* GET New Training page. */
     app.get('/newTraining', function(req, res) {
@@ -29,10 +29,11 @@
         // Get our form values. These rely on the "name" attributes
         newTrain.nameOfTraining = req.body.nameOfTraining;
         newTrain.route = req.body.route;
-        newTrain.exercise.nameOfExercise = req.body.nameOfExercise;
-        newTrain.exercise.sets = req.body.sets;
-        newTrain.exercise.repeats = req.body.repeats;
-        newTrain.exercise.durationOfPause = req.body.durationOfPause;
+        newTrain.exercise.nameOfExercise1 = req.body.nameOfExercise1;
+        newTrain.exercise.nameOfExercise2 = req.body.nameOfExercise2;
+        newTrain.exercise.nameOfExercise3 = req.body.nameOfExercise3;
+        newTrain.sets = req.body.sets;
+        newTrain.repeats = req.body.repeats;
 
         // Submit to the DB
         newTrain.save(function (err, doc) {

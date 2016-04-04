@@ -3,12 +3,8 @@
 <head>
     <% include ../partials/head %>
 </head>
-<body id="page-top">
 
-<!--[if lt IE 8]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+<body id="page-top">
 
 <header>
     <% include ../partials/header %>
@@ -36,18 +32,6 @@
     </div>
 </div>
 -->
-
-<header>
-    <div class="header-content" id="chooseTraining">
-        <div class="header-content-inner">
-            <h1>Boxen Trainingsplan</h1>
-            <hr>
-            <p class="text-faded" ><b>Wenn Sie auf der Suche nach Tipps für Ihre nächste Kneipenschlägerei sind, sollten Sie hier lieber
-                    das Handtuch werfen.</b></p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Mehr erfahren</a>
-        </div>
-    </div>
-</header>
 
 <section class="bg-primary" id="about">
     <div class="container">
@@ -219,26 +203,9 @@
     <% include ../partials/footer %>
 </footer>
 
-<!-- jQuery -->
-<script src="/js/jquery.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/bower_components/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="/js/jquery.fittext.js"></script>
-<script src="/js/wow.min.js"></script>
-<script src="/js/jquery.easing.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/bower_components/bootstrap/js/creative.js"></script>
-
-<!-- socket.io -->
-<script src="/socket.io/socket.io.js"></script>
-
-<!-- APP CODE
-<script src="/app.js"></script>-->
+<jsFooter>
+    <% include ../partials/jsFooter %>
+</jsFooter>
 
 </body>
 </html>
