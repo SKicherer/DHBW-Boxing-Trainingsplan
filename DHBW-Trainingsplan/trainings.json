@@ -1,24 +1,30 @@
 [
     {
-        "_id": "00001",
-        "nameOfTraining": "30-Anf-Musk",
-        "route": "3",
-        "exercise": {
-            "nameOfExercise1": "Liegestützen",
-            "nameOfExercise2": "Crunches",
-            "nameOfExercise3": "Situps"
-        },
-        "sets": "2",
-        "repeats": "15"
+    "_id": "00001",
+    "nameOfTraining": "30-Anf-Musk",
+    "route": "3",
+    "exercise": {
+        "nameOfExercise1": "Liegestützen",
+        "bild1": "liegestuetze.gif",
+        "nameOfExercise2": "Crunches",
+        "bild2": "crunches.gif",
+        "nameOfExercise3": "Kniebeugen",
+        "bild3": "kniebeugen.gif"
     },
+    "sets": "2",
+    "repeats": "15"
+},
     {
         "_id": "00002",
         "nameOfTraining": "30-Anf-Kraft",
         "route": "3",
         "exercise": {
-            "nameOfExercise": "Juming Jacks",
-            "nameOfExercise2": "Strecksprünge",
-            "nameOfExercise3": "Situps"
+            "nameOfExercise1": "Burpees",
+            "bild1": "burpees.gif",
+            "nameOfExercise2": "Liegestützen",
+            "bild2": "liegestuetze.gif",
+            "nameOfExercise3": "Jumping-Jacks",
+            "bild3": "jumpingJacks.gif"
         },
         "sets": "2",
         "repeats": "15"
@@ -28,9 +34,12 @@
         "nameOfTraining": "30-Prof-Kraft",
         "route": "3",
         "exercise": {
-            "nameOfExercise": "Juming Jacks",
-            "nameOfExercise2": "Strecksprünge",
-            "nameOfExercise3": "Liegestützen"
+            "nameOfExercise1": "Jumping-Jacks",
+            "bild1": "jumpingJacks.gif",
+            "nameOfExercise2": "Kniebeugen",
+            "bild2": "kniebeugen.gif",
+            "nameOfExercise3": "Liegestützen",
+            "bild3": "liegestuetze.gif"
         },
         "sets": "2",
         "repeats": "30"
@@ -40,57 +49,72 @@
         "nameOfTraining": "30-Prof-Musk",
         "route": "3",
         "exercise": {
-            "nameOfExercise": "Juming Jacks",
-            "nameOfExercise2": "Strecksprünge",
-            "nameOfExercise3": "Situps"
+            "nameOfExercise1": "Lunges",
+            "bild1": "lunges.gif",
+            "nameOfExercise2": "Burpees",
+            "bild2": "burpees.gif",
+            "nameOfExercise3": "Crunches",
+            "bild3": "crunches.gif"
         },
         "sets": "3",
         "repeats": "30"
     },
     {
         "_id": "00005",
-        "nameOfTraining": "15-Anf-Musk",
+        "nameOfTraining": "45-Anf-Musk",
         "route": "3",
         "exercise": {
-            "nameOfExercise": "Juming Jacks",
-            "nameOfExercise2": "Strecksprünge",
-            "nameOfExercise3": "Liegestützen"
+            "nameOfExercise1": "Crunches",
+            "bild1": "crunches.gif",
+            "nameOfExercise2": "Kniebeugen",
+            "bild2": "kniebeugen.gif",
+            "nameOfExercise3": "Liegestützen",
+            "bild3": "liegestuetze.gif"
         },
         "sets": "2",
         "repeats": "15"
     },
     {
         "_id": "00006",
-        "nameOfTraining": "15-Anf-Kraft",
+        "nameOfTraining": "45-Anf-Kraft",
         "route": "2",
         "exercise": {
-            "nameOfExercise": "Juming Jacks",
-            "nameOfExercise2": "Strecksprünge",
-            "nameOfExercise3": "Situps"
+            "nameOfExercise1": "Lunges",
+            "bild1": "lunges.gif",
+            "nameOfExercise2": "Crunches",
+            "bild2": "crunches.gif",
+            "nameOfExercise3": "Burpees",
+            "bild3": "burpees.gif"
         },
         "sets": "2",
         "repeats": "15"
     },
     {
         "_id": "00007",
-        "nameOfTraining": "15-Prof-Kraft",
+        "nameOfTraining": "45-Prof-Kraft",
         "route": "2",
         "exercise": {
-            "nameOfExercise": "Juming Jacks",
-            "nameOfExercise2": "Strecksprünge",
-            "nameOfExercise3": "Liegestützen"
+            "nameOfExercise1": "Lunges",
+            "bild1": "lunges.gif",
+            "nameOfExercise2": "Jumping-Jacks",
+            "bild2": "jumpingJacks.gif",
+            "nameOfExercise3": "Liegestützen",
+            "bild3": "liegestuetze.gif"
         },
         "sets": "2",
         "repeats": "15"
     },
     {
         "_id": "00008",
-        "nameOfTraining": "15-Prof-Musk",
+        "nameOfTraining": "45-Prof-Musk",
         "route": "2",
         "exercise": {
-            "nameOfExercise": "Juming Jacks",
-            "nameOfExercise2": "Strecksprünge",
-            "nameOfExercise3": "Situps"
+            "nameOfExercise1": "Crunches",
+            "bild1": "crunches.gif",
+            "nameOfExercise2": "Burpees",
+            "bild2": "burpees.gif",
+            "nameOfExercise3": "Kniebeugen",
+            "bild3": "kniebeugen.gif"
         },
         "sets": "2",
         "repeats": "15"

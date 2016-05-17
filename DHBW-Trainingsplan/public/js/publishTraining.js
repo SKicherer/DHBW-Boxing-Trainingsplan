@@ -1,73 +1,65 @@
-var a, b, c;
+var socket;
+var timeinterval;
+var minute;
 
-function Init()
-{
-	var uebernahme=new String(document.location.href);
-	var uebergabe=uebernahme.indexOf("?");
+//Take time from server
+socket = io.connect("http://localhost:4000/");
+socket.on('sendTime', function(data){
+    minute = data.time;
+});
 
-    a=new String(uebernahme.substring(uebergabe+7,uebergabe+8));
-	b=new String(uebernahme.substring(uebergabe+16,uebergabe+17));
-	c=new String(uebernahme.substring(uebergabe+22,uebergabe+23));
+// Countdown Timer
+$('#clockdiv').css("display", "none");
+$('#stopTimer').css("display", "none");
 
-	return {
-		dauer: a,
-		niveau: b,
-		art: c
-	};
+$('#startCountdownButton').click(function (e) {
+    $('#clockdiv').css("display", "inline");
+    $("#stopTimer").css("display", "inline");
+    $("#playTimer").css("display", "inline");
+
+    var hour = 1;
+    var time = hour * minute * 60 * 1000;
+    var deadline = new Date(Date.parse(new Date()) + time);
+    initializeClock('clockdiv', deadline);
+});
+
+$('#stopTimer').click(function () {
+    clearInterval(timeinterval);
+});
+
+function getTimeRemaining(endtime) {
+    var t = Date.parse(endtime) - Date.parse(new Date());
+
+    var seconds = Math.floor((t / 1000) % 60);
+    var minutes = Math.floor((t / 1000 / 60) % 60);
+    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+
+    return {
+        'total': t,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
 }
 
-function Runde(i)
-{
-	document.write("<h2>"+i+". Runde</h2><table>");
+function initializeClock(id, endtime) {
+    var clock = document.getElementById(id);
+    var hoursSpan = clock.querySelector('.hours');
+    var minutesSpan = clock.querySelector('.minutes');
+    var secondsSpan = clock.querySelector('.seconds');
+
+    function updateClock() {
+        var t = getTimeRemaining(endtime);
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        if (t.total <= 0) {
+            clearInterval(timeinterval);
+        }
+    }
+
+    updateClock();
+    timeinterval = setInterval(updateClock, 1000);
 }
 
-function Ende()
-{
-	document.write("</table>");
-}
-
-function Pause()
-{
-	document.write("</table><br></br>");
-	document.write("<p>Gönnen Sie sich 1 min Pause!</p><br></br>");
-}
-
-function Uebung(art,satz,wdh)
-{
-	document.write("<tr><th>"+art+"</th>");
-	document.write("<th>"+a*satz+" Sätze</th>");
-	document.write("<th>"+b*wdh+" Wiederholungen</th></tr>");
-}
-
-var t = Init();
-if (t.art == 1)
-{
-    Runde(1);
-    Uebung("Liegestützen",2,5);
-    Uebung("Crunches",2,10);
-    Uebung("Situps",3,10);
-    Pause();
-
-    Runde(2);
-    Uebung("Juming Jacks",1,25);
-    Uebung("Strecksprünge",1,25);
-    Uebung("Seilhüpfen",1,50);
-    Pause();
-}
-
-if (t.art == 2)
-{
-    Runde(1);
-    Uebung("Juming Jacks",1,25);
-    Uebung("Strecksprünge",1,25);
-    Uebung("Seilhüpfen",1,50);
-    Pause();
-
-    Runde(2);
-    Uebung("Liegestützen",2,5);
-    Uebung("Crunches",2,10);
-    Uebung("Situps",3,10);
-    Pause();
-}
-
-Ende();

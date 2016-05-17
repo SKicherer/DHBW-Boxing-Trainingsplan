@@ -1,0 +1,5 @@
+Zuerst in Robomongo Collection trainingsplan remove all Documents 
+
+cd C:\Program Files\MongoDB\Server\3.2\bin
+mongoimport --db trainingsplan --collection training --type json --file C:\PAOK\trainings.json --jsonArray
+ 

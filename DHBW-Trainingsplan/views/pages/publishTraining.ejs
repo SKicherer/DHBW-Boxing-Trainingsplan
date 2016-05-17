@@ -8,23 +8,74 @@
 
 <body id="page-top">
 
-<header>
-    <% include ../partials/headerPages %>
-</header>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">Boxen Trainingsplan</a>
+            <a href="/" class="fa fa-1x fa fa-home wow bounceIn text-primary navbar-toggle collapsed"
+               role="button"></a>
+        </div>
+    </div>
+</nav>
 
 <section class="bg-primary" id="choices">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 text-center">
-			<div class="btn-group">
+    <div><strong>Rounds:<%= traininglist[i].route %></strong></div>
 
-			</div>
-		</div>
-	</div>
+    <p></p>
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <div><strong>
+                            <ins>
+                                <%= traininglist[i].exercise.nameOfExercise1 %>
+                            </ins>
+                        </strong></div><br>
+                    <img src="/img/exercises/<%= traininglist[i].exercise.bild1 %>" alt="HTML5 Icon">
+                    <p></p>
+                    <div>Sätze: <%= traininglist[i].sets %></div>
+                    <div>Wiederholungen: <%= traininglist[i].repeats %></div>
+                    <br>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div><strong>
+                            <ins>
+                                <%= traininglist[i].exercise.nameOfExercise2 %>
+                            </ins>
+                        </strong></div><br>
+                    <img src="/img/exercises/<%= traininglist[i].exercise.bild2 %>" alt="HTML5 Icon">
+                    <p></p>
+                    <div>Sätze: <%= traininglist[i].sets %></div>
+                    <div>Wiederholungen: <%= traininglist[i].repeats %></div>
+                    <br>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div><strong>
+                            <ins>
+                                <%= traininglist[i].exercise.nameOfExercise3 %>
+                            </ins>
+                        </strong></div><br>
+                    <img src="/img/exercises/<%= traininglist[i].exercise.bild3 %>" alt="HTML5 Icon">
+                  <p></p>
+                    <div>Sätze: <%= traininglist[i].sets %></div>
+                    <div>Wiederholungen: <%= traininglist[i].repeats %></div>
+                    <br>
+                </div>
+
+
+                <timer>
+                    <% include ../partials/timer %>
+                </timer>
+            </div>
+        </div>
+    </section>
 </section>
-
-<jsFooter>
-    <% include ../partials/jsFooter %>
-</jsFooter>
+    <jsFooter>
+        <% include ../partials/jsFooter %>
+    </jsFooter>
 
 </body>
 </html>

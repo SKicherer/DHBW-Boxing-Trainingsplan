@@ -1,7 +1,7 @@
 header .header-chooseTraining {
     position: relative;
     width: 100%;
-    min-height: auto;
+    height: 100%;
     text-align: center;
     color: #fff;
     background-image: url(../img/headerChooseTraining.jpg);
@@ -14,4 +14,15 @@ header .header-chooseTraining {
 
 .container{
     color: rgba(255,255,255,.7);
+}
+
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: #43738c;
+    border-color: #4598da;
+    border-style: solid none;
+    border-width: 2px 10px;
 }

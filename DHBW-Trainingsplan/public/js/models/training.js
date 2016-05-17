@@ -3,22 +3,24 @@
  */
 var mongoose = require('mongoose');
 
-//var socket = io.connect('http://127.0.0.1:4000/');
-//var app = app || {};
-
 var trainingsSchema = mongoose.Schema({
-    _id: String,
+    _id:            mongoose.Schema.Types.ObjectId,
     nameOfTraining: String,
-    route: String,
+    route:          String,
     exercise: {
         nameOfExercise1: String,
+        bild1:           String,
         nameOfExercise2: String,
-        nameOfExercise3: String
+        bild2:           String,
+        nameOfExercise3: String,
+        bild3:           String
     },
-    sets: String,
-    repeats: String
+    sets:           String,
+    repeats:        String
+}, {
+    versionKey: false
 });
 
-// create the model for every training and expose it to our app(in file: trainings.json)
-var training = mongoose.model("Training", trainingsSchema, "trainings");
+// create the model for every training and expose it to our app in file: trainings.json)
+var training = mongoose.model("Training", trainingsSchema, "training");
 module.exports = training;

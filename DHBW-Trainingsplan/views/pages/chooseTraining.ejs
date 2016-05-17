@@ -18,46 +18,59 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <form>
                     <div class="btn-group">
-                        Dauer des Trainings?
-                        <select id="duration" type="text" class="form-control btn btn-default dropdown-toggle"
-                                data-toggle="dropdown">
-                            Trainingsdauer<span class="caret"></span>
-                            <option selected>30 min</option>
-                            <option>45 min</option>
-                            <hr class="light">
-                        </select>
+                        <div id="possibleDurations">
+                            <p>Dauer des Trainings?</p>
+                            <select id="duration" name="duration" type="button"
+                                    class="form-control btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown">
+                                <option value="0" selected></option>
+                                <option value="1">30 min</option>
+                                <option value="2">45 min</option>
+                            </select>
+                        </div>
                     </div>
 
+                    <p></p>
                     <div class="btn-group">
-                        Ihr Niveau?
-                        <select id="level" type="button" class="form-control btn btn-default dropdown-toggle"
-                                data-toggle="dropdown">
-                            Trainingsniveau<span class="caret"></span>
-                            <option selected>Anfänger</option>
-                            <option>Profi</option>
-                            <hr class="light">
-                        </select>
+                        <div id="possibleLevels">
+                            <p>Ihr Niveau?</p>
+                            <select id="level" name="level" type="button"
+                                    class="form-control btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown">
+                                <option value="0" selected></option>
+                                <option value="1">Anfänger</option>
+                                <option value="2">Profi</option>
+                            </select>
+                        </div>
                     </div>
 
+                    <p></p>
                     <div class="btn-group">
-                        Art des Trainings?
-                        <select id="type" type="button" class="form-control btn btn-default dropdown-toggle"
-                                data-toggle="dropdown">
-                            Ziel<span class="caret"></span>
-                            <option selected>Muskelaufbau</option>
-                            <option>Kraftausdauer</option>
-                            <hr class="light">
-                        </select>
+                        <div id="possibleTypes">
+                            <p>Art des Trainings?</p>
+                            <select id="type" name="type" type="button"
+                                    class="form-control btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown">
+                                <option value="0" selected></option>
+                                <option value="1">Muskelaufbau</option>
+                                <option value="2">Kraftausdauer</option>
+                            </select>
+                        </div>
                     </div>
-
-                    <hr class="light">
-
-                    <a href="publishTraining" id="ParamSpeichern" class="btn btn-default btn-xl">Start</a>
-
                 </form>
+                <p></p>
+
+                <hr>
+
+                <div class="btn-group">
+                    <div id="nextSite">
+                        <a href="publishTraining" class="btn btn-default btn-xl" role="button">Start</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </section>
 
 <jsFooter>

@@ -67,7 +67,7 @@ module.exports = function (grunt) {
       dist: {
         src: ['public/js/chooseTraining.js'],
         dest: 'public/js/concat.js'
-      },
+      }
     },
 
     //this is currently turned off, since jquery KILLS it
@@ -112,7 +112,7 @@ module.exports = function (grunt) {
         css: {
             files: [
                 'public/css/**/*.css'
-            ],
+            ]
         },
         less: {
             files: ['public/bower_components/bootstrap/less/**/*.less'],
@@ -124,7 +124,7 @@ module.exports = function (grunt) {
             options: {
                 nospawn: true // Without this option specified express won't be reloaded
             }
-        },
+        }
     },
 
     connect: {
@@ -153,7 +153,7 @@ module.exports = function (grunt) {
           //nodeArgs: ['--debug'],
           ignoredFiles: ['node_modules/**'],
           //watchedExtensions: ['js'],
-          watchedFolders: ['views', 'routes'],
+          watchedFolders: ['views', 'public/js'],
           //delayTime: 1,
           legacyWatch: true,
           env: {

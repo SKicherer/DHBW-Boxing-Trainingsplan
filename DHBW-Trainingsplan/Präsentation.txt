@@ -1,0 +1,53 @@
+Hallo zusammen,
+
+wie besprochen, hier die Punkte die ich von einem Projekt erwarten würde, bzw. welche ich nicht erwarte:
+
+Was ich nicht erwarte:
+
+·         Eine perfekte fertige Lösung. Idealerweise habt Ihr bei dem Projekt ein wenig oder viel gelernt und ein Teil davon soll an Eure Mitstreiter weitergegeben werden.
+·         Langweilige Powerpoint-Präsentationen (das ist mein Job). Präsentiert es so, wie Ihr es für richtig haltet. Das kann natürlich gerne Powerpoint sein oder aber Quellcode oder ein Prezi oder ein Ausdruckstanz oder was anderes.
+ 
+Was ich von der Präsentation erwarte:
+ 
+·         Vorstellung Eurer Idee: was habt Ihr Euch gedacht, welches Problem soll es lösen / oder welchen Spaßfaktor soll es bringen / oder was wolltet Ihr dabei lernen
+·         Wenn es eine Weiterentwicklung aus dem Vorsemester ist: wo war der Ausgangspunkt im aktuellen Projekt
+·         Wer hat was im Team gemacht, warum
+·         Welche Technologien (Basis Webserver / Datenbank / Framework / ext. Komponenten) wurden verwendet und warum. Hier gerne Quellcode, Datenbankstruktur live oder auf Folien einbauen.
+·         Was war das größte Problem, war dies vorher auch absehbar oder überraschend
+·         Was klappte besonders gut
+·         Wo konnte man sich Arbeit sparen, indem man auf fertige (Teil-)lösungen zurückgreifen konnte
+·         Wenn Ihr nochmal von vorn anfangen müsstet, was würdet Ihr anders machen. Was würdet Ihr Euren Kollegen empfehlen, wenn sie eine ähnliche Problemstellung bewältigen müssen.
+·         und natürlich eine vernünftige Live-Demo
+ 
+Mir ist es am wichtigsten, dass Ihr Euch über die Projekte viel Wissen / Best Practices gegenseitig vermitteln könnt und wir idealerweise Einblick in viele Technologien und Frameworks / APIs und Co bekommen.
+
+
+Zusätzlich bitte ich euch, das einer pro Gruppe mir eine kurze Mail zu dem Projekt schickt.
+
+Die E-Mail sollte Antworten auf die folgenden Fragen bieten:
+
+    Wie nennt Ihr euer Projekt?
+    Welche Teilnehmer sind bei ihrem Projekt? (Vorname und Nachname)
+    Auf welcher Programmiersprache setzt ihr auf?
+    Wisst ihr schon, auf welcher Plattform ihr das Projekt hosten/speichern wollt? Falls ja, welche? (eigener Computer, Hosting-Paket, AWS, Heroku, …)
+    Nutzt ihr eine Quellcodeverwaltung (SVN/Git, …) ?
+
+
+
+
+
+
+Mit freundlichen Grüßen
+
+i.A. Dennis Alexander Petrasch
+---
+Keil IT e.K.
+Oderstraße 17
+70376 Stuttgart
+
+Tel: 0711 - 25 25 45 - 15
+Hotline: 0711 - 25 25 45 - 0
+Mail: petrasch@keil-it.de
+http://www.keil-it.de
+HRA 721743 Stuttgart
+UstID: DE249642937

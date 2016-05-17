@@ -1,6 +1,3 @@
-/**
- * Created by Dimitrios on 01.04.2016.
- */
 // Bring Mongoose into the app
 var mongoose = require( 'mongoose' );
 

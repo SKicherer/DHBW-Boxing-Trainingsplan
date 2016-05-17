@@ -10,29 +10,6 @@
     <% include ../partials/header %>
 </header>
 
-<!--SOCKET.IO-->
-<!--<div class="container">
-    <div class="jumbotron">
-        <h1>trainingsplan</h1>
-        <p></p>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-6">
-                <h3>All Chatter
-                    <button id="clearAllPosts" type="button" class="btn btn-danger btn-xs pull-right">clear</button>
-                </h3>
-                <div id="allPosts" class="form-control"></div>
-                <div class="input-group">
-                    <input id="blast" type="text" class="form-control" placeholder="send something to everyone">
-						<span class="input-group-btn">
-							<button id="send" class="btn btn-success" type="button">Send</button>
-						</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
-
 <section class="bg-primary" id="about">
     <div class="container">
         <div class="row">
@@ -41,56 +18,14 @@
                 <hr class="light">
                 <p class="text-faded">Beim Boxtraining geht es nicht nur darum, Ihrem Gegenüber eins auf die Nase
                     zu hauen. Beim Boxtraining können Sie vor allem Ihren eigenen Körper stählen. Und nicht nur Muskeln
-                    profitieren vom Boxen: Ein gelungenes Boxtraining verbessert auch Ihre Ausdauer, Schnellkraft, Kraftausdauer und trainiert
+                    profitieren vom Boxen: Ein gelungenes Boxtraining verbessert auch Ihre Ausdauer, Schnellkraft,
+                    Kraftausdauer und trainiert
                     Ihre Psyche.</p>
-                <p class="text-faded">Welche Form des Boxtrainings die richtige für Sie ist, wie sich Boxtraining mit Ihrem
-                    Fitnesstraining kombinieren lässt und welche Ausrüstung Sie als Anfänger brauchen, verraten wir Ihnen hier.</p>
+                <p class="text-faded">Welche Form des Boxtrainings die richtige für Sie ist, wie sich Boxtraining mit
+                    Ihrem
+                    Fitnesstraining kombinieren lässt und welche Ausrüstung Sie als Anfänger brauchen, verraten wir
+                    Ihnen hier.</p>
                 <a href="chooseTraining" class="btn btn-default btn-xl">Start</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Angebote</h2>
-                <hr class="primary">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <a href="trainingTipps" class="fa fa-4x fa-trophy wow bounceIn text-primary"></a>
-                    <!-- <i class="fa fa-4x fa-trophy wow bounceIn text-primary"></i> -->
-                    <h3>Training Tipps</h3>
-                    <p class="text-muted">Hilfreiche Tipps zu einzelnen Trainingselementen</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-archive wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                    <h3>Verlauf</h3>
-                    <p class="text-muted">Mit unseren Trainingspläne verbessern Sie
-                        schnell und effizient Ihre Fähigkeiten in Boxen</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa fa fa-calendar wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                    <h3>Kalendar</h3>
-                    <p class="text-muted">Benutzen Sie unser Kalendar um Ihre Trainings zu planen</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa fa-clock-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                    <h3>Timer</h3>
-                    <p class="text-muted">Kontrollieren Sie Ihre Trainingszeit</p>
-                </div>
             </div>
         </div>
     </div>
@@ -100,24 +35,24 @@
     <div class="container-fluid">
         <div class="row no-gutter">
             <div class="col-lg-4 col-sm-6">
-                <a href="trainingTipps" class="portfolio-box">
-                    <img src="/img/portfolio/1.jpg" class="img-responsive" alt="">
+                <a href="http://www.fitforfun.de/rezepte/muskelaufbau" class="portfolio-box">
+                    <img src="/img/portfolio/1.jpg" id="img1" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                Vorbereitung beim Boxen
+                                Vorbereitung zum Boxen
                             </div>
                             <div class="project-name">
-                                Die beste Tipps für die Vorbereitung aufs Training
+                                Die beste Rezepte fürs Training
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a href="publishTraining" class="portfolio-box">
+                <a href="downloadTraining" class="portfolio-box">
                     <div class="portfolio-box">
-                        <img src="/img/portfolio/2.jpg" class="img-responsive" alt="">
+                        <img src="/img/portfolio/2.jpg" id="img2" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -134,7 +69,7 @@
             </div>
             <div class="col-lg-4 col-sm-6">
                 <a href="addNewTraining" class="portfolio-box">
-                    <img src="/img/portfolio/3.jpg" class="img-responsive" alt="">
+                    <img src="/img/portfolio/3.jpg" id="img3" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
@@ -144,57 +79,6 @@
                     </div>
                 </a>
             </div>
-
-            <!--
-
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="/img/portfolio/4.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="http://fitnessrezepte.de/" class="portfolio-box">
-                    <img src="/img/portfolio/5.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Fitness Rezepte
-                            </div>
-                            <div class="project-name">
-                                Täglich ein frisches Rezept
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="http://www.boxen-stuttgart.de/" class="portfolio-box">
-                    <img src="/img/portfolio/6.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Boxvereine in Stuttgart
-                            </div>
-                            <div class="project-name">
-                                Wir empfehlen Ihnen die beste Boxvereine in der Region Stuttgart
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            -->
-
         </div>
     </div>
 </section>
